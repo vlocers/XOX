@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#status {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 3px solid black;
+    color: red;
+    font-weight: bold;
+    background-color: black;
+    cursor: pointer;
+}
