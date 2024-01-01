@@ -1,42 +1,53 @@
-*{
-    margin : 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    background: linear-gradient(45deg, #FF6B6B, #556270, #FF6B6B);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    transition: background 0.5s ease-in-out;
 }
 
-#header{
-    font-size: 1.5rem;
+#header {
+    font-size: 1.4rem;
     margin-top: 40px;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
-#container{
-    display:block;
+#container {
+    display: block;
     justify-content: center;
     text-align: center;
     margin-top: 100px;
 }
 
-input{
+input {
     border-radius: 10px;
     padding: 20px;
-    margin-left:30px;
-    font-size: 1.3rem;
+    margin-left: 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
 }
-#button1{
+
+#button1 {
     margin-top: 50px;
     padding: 15px;
     font-size: 1.2rem;
     font-weight: bolder;
     color: orange;
     background-color: black;
+    width: 100%;
+    max-width: 300px;
 }
-#button1:hover{
+
+#button1:hover {
     color: black;
     background-color: orange;
     transition: 0.4s;
@@ -44,10 +55,20 @@ input{
     cursor: pointer;
 }
 
-#inputContainer{
-    display:flex;
+#inputContainer {
+    display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
+/* Medya sorguları ile düzenlemeler */
+@media only screen and (min-width: 600px) {
+    input, #button1 {
+        width: auto;
+        max-width: none;
+    }
+    body{
+        font-size: 7px;
+    }
+}

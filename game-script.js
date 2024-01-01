@@ -61,16 +61,16 @@ function showDrawMessage() {
 }
 
 function resetGame() {
-    
+    // Oyunu sıfırla
     currentPlayer = 'X';
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     gameActive = true;
 
-    
+    // Status div'ini göster ve içeriğini ayarla
     document.getElementById('status').style.display = 'block';
     document.getElementById('status').innerText = `Sıra ${player1Name} oyuncusunda`;
 
-    
+    // Game board'u temizle
     const cells = document.getElementById('board').children;
     for (let i = 0; i < cells.length; i++) {
         cells[i].innerText = '';
